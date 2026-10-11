@@ -11,8 +11,8 @@
     tag: 'Traces, vias, spacing, and wire for your builds',
     intro: 'Five free tools for circuit board and wiring design: trace width for a current, trace resistance and drop, via current, conductor spacing for a voltage, and wire gauge conversion with voltage drop. Type values with prefixes, and the answers update as you type.',
     site: 'https://www.themakersworkbench.com',
-    repo: '',
-    wiki: '',
+    repo: 'https://github.com/MakersWorkbench/pcb-wiring',
+    wiki: 'https://github.com/MakersWorkbench/pcb-wiring/wiki',
     license: 'https://www.apache.org/licenses/LICENSE-2.0',
     licenseName: 'Apache License 2.0'
   };
