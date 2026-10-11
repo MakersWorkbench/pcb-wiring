@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Mount point and description for the PCB and Wiring Tools.
+ *
+ * The tool (assets/js/pcb-app.js) builds its own interface inside the mount
+ * element. The description below it is server-rendered so that search
+ * engines, screen readers, and visitors without JavaScript get real text.
+ *
+ * Available variables:
+ * - heading: heading level (h1 to h6) used for the tool's title.
+ * - features: array of [label, description] pairs for what the tool covers.
+ * - show_description: whether to render the description section.
+ */
+#}
+<div class="tmwb-pcb-wiring-wrapper">
+  <div class="tmwb-pcb" id="tmwb-pcb" data-heading="{{ heading }}">
+    <noscript>
+      {{ 'The PCB and Wiring Tools needs JavaScript.'|t }}
+    </noscript>
+  </div>
+  {% if show_description and features %}
+    <section class="tmwb-pcb-wiring-about" aria-labelledby="tet-about-title">
+      <h3 id="tet-about-title">{{ 'What the PCB and Wiring Tools covers'|t }}</h3>
+      <p>{{ 'The PCB and Wiring Tools are a free set of tools for circuit board and wire design. Pick a tab, type your values, and the answer updates as you type, with the formula shown.'|t }}</p>
+      <ul>
+        {% for feature in features %}
+          <li><strong>{{ feature[0] }}</strong>: {{ feature[1] }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'The trace and via formulas are the IPC-2221 curves, a conservative starting point. Confirm with the standards and your board maker, and never rely on the spacing table alone for mains designs.'|t }}</p>
+    </section>
+  {% endif %}
+</div>

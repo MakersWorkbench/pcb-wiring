@@ -1,0 +1,15 @@
+tools:
+  version: 1.0.0
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+    gpl-compatible: false
+  css:
+    component:
+      assets/pcb.css: {}
+      css/tmwb-pcb-wiring.css: {}
+  js:
+    # pcb-logic.js defines the TMWBPcb global that pcb-app.js reads.
+    assets/js/pcb-logic.js: {}
+    # pcb-app.js mounts onto #tmwb-pcb, so it must run after the markup exists.
+    assets/js/pcb-app.js: { attributes: { defer: true } }
